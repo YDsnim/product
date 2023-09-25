@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.2.8</version>
+			<version>3.5.6</version>
 		</dependency>
 		<!-- mybatis-spring 1.2.2 -->
 		<dependency>
@@ -63,7 +63,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
-			<scope>test</scope>
 		</dependency>
 		<!-- springframework/spring-jdbc -->
 		<dependency>
@@ -153,8 +152,8 @@
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- javax servlet 3.1.0 -->

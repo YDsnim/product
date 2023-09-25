@@ -35,6 +35,7 @@
 		
 		
 		<!-- 읽어들일 패키지들  -->
-	<context:component-scan base-package="edu.kyj.service" />
+	<context:component-scan base-package="mit.kyj.service" />
+	<context:component-scan base-package="mit.kyj.vo" />
 		
 </beans>
