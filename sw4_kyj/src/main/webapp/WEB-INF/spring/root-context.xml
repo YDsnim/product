@@ -12,7 +12,7 @@
 <!-- hikari config -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 	 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-			<property name="jdbcUrl" value="jdbc:mysql://localhost:3306"></property> 
+			<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mit"></property> 
 	         <!-- Oracle 11g 경우 value="jdbc:oracle:thin:@URL주소:1521:XE" -->
 	         <!-- Oracle 19  경우 value="jdbc:oracle:thin:@URL주소:1521:orcl" -->
 			<property name="username" value="root"></property>
@@ -20,22 +20,23 @@
 	</bean>	
 	
 	<!-- 히카리  datasource -->
-	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+	<bean id="dataSourceTest" class="com.zaxxer.hikari.HikariDataSource">
 		<constructor-arg ref="hikariConfig"></constructor-arg>
 	</bean>
 	<!--/ hikari config -->
 	
 	<!-- SqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-    	<property name="dataSource" ref="dataSource"></property>
+    	<property name="dataSource" ref="dataSourceTest"></property>
 	</bean>		
 		
 		<!-- mybatis가 읽어들일 기본 맵퍼가 있는 패키지 위치 설정 -->
-	<mybatis-spring:scan base-package="mit.kyj.dao" />
+	<mybatis-spring:scan base-package="mit.kyj.mapper" />
 		
 		
 		<!-- 읽어들일 패키지들  -->
 	<context:component-scan base-package="mit.kyj.service" />
-	<context:component-scan base-package="mit.kyj.vo" />
+	<context:component-scan base-package="mit.kyj.domain" />
+	<context:component-scan base-package="mit.kyj.controller" />
 		
 </beans>

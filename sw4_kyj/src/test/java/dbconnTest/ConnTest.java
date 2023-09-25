@@ -1,4 +1,4 @@
-package mit;
+package dbconnTest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

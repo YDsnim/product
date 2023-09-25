@@ -1,9 +1,9 @@
-package mit.kyj.vo;
+package mit.kyj.domain;
 
 import lombok.Data;
 
 @Data
-public class Sw4_VO {
+public class Board_VO {
 	private String code;
 	private String pname;
 	private int cost;
